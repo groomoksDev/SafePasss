@@ -1,4 +1,12 @@
-/target/
-/api/target/
-/.idea/
-/core/target/
+### Ideal project files ###
+.idea/
+*.iml
+*.ipr
+*.iws
+*.patch
+
+###java###
+
+target/
+.gitignore
+static
