@@ -1,6 +1,6 @@
 package home.app.SafePasss.v1;
 
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +13,7 @@ public class SafeApiInfo {
     @Value("${safe-pass.version}")
     private String buildVersion;
 
-    @ApiOperation("Версия приложения")
+    @Operation(description = "Версия приложения")
     @GetMapping("/version")
     public String version() {
         return String.format("Version %s!", buildVersion);
